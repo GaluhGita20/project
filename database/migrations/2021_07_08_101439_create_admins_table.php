@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUkmTable extends Migration
+class CreateAdminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateUkmTable extends Migration
      */
     public function up()
     {
-        Schema::create('ukm', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string('slug',255);
-            $table->string('nama', 50);
-            $table->text('keterangan');
-            $table->text('contact');
-            $table->string('logo', 255);
-            $table->string('video', 255)->nullable();
+            $table->string('username')->unique();
+            $table->string('password');
+            $table->timestamps();
         });
     }
 
@@ -31,6 +28,6 @@ class CreateUkmTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ukm');
+        Schema::dropIfExists('admins');
     }
 }

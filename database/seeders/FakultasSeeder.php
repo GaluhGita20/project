@@ -129,7 +129,7 @@ class FakultasSeeder extends Seeder
           'nama' => 'Fakultas Kelautan dan Perikanan',
           'keterangan' => '<p style=\"text-align:justify\"><big>Fakultas Kelautan dan Perikanan (FKP) merupakan salah satu dari 13 Fakultas yang ada di Universitas Udayana. Fakultas yang terletak di jalan Kampus Bukit Jimbaran ini merupakan&nbsp; Fakultas termuda di Universitas Udayana (UNUD) yang berdiri pada tanggal 10 Oktober 2011 sesuai dengan Surat Keputusan (SK) Rektor Nomor: 680/UN.14/HK/2011 tentang pendirian Fakultas Kelautan dan Perikanan Universitas Udayana.</big></p>\r\n',
           'contact' => '<p><big><strong>Alamat</strong> <strong>:</strong> Jl. Kampus Bukit Jimbaran 80361 Bali, Indonesia<br />\r\n<strong>Phone</strong> <strong>:</strong> +62 361 702802<br />\r\n<strong>Email :</strong> <a href=\"mailto:fkp@unud.ac.id\">fkp@unud.ac.id</a> </big></p>\r\n',
-          'logo' => 'admin/gambar/fakultas/logo_1596528358.png',
+          'logo' => 'admin/gambar/fakultas/logo_1598070255.png',
           ]);
             
     }

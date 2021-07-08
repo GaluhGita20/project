@@ -3,7 +3,7 @@
 use App\Http\Controllers\FakultasController;
 use App\Models\Fakultas;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,17 +23,7 @@ Route::get('/loginAdmin', function (){
     return view('loginAdmin');
 })->name('loginAdmin');
 
-Route::get('/infoUKM', function(){
-    return view('page/infoUKM');
-})->name('infoUKM');
 
-Route::get('/infoFakultas', function(){
-    return view('page/infoFakultas');
-})->name('infoFakultas');
-
-Route::get('/gallery', function(){
-    return view('page/gallery');
-})->name('gallery');
 
 Route::get('/contact', function(){
     return view('page/contact');
@@ -44,4 +34,13 @@ Route::get('/dashboardAdmin', function () {
 })->name('dashboardAdmin');
 
 //database connectivity
-Route::get('/fakultas',[FakultasController::class, 'index']);
+Route::get('/fakultas',[FakultasController::class, 'index'])->name('fakultas');
+Route::get('/infoUkm',[App\Http\Controllers\UkmController::class, 'index']);
+Route::get('/gallery',[App\Http\Controllers\ImageController::class, 'index']);
+
+//admin
+Route::prefix('admin')->group(function(){
+    Route::get('/',[Admin\Auth\LoginController::class, 'loginForm']);
+    Route::get('/login',[Admin\Auth\LoginController::class, 'loginForm'])->name('admin.login');
+    Route::get('/home',[Admin\HomeController::class, 'index'])->name('admin.home');
+});

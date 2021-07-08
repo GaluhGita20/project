@@ -1,11 +1,3 @@
-<?php
-ob_start();
-    define('BASE_URL', 'https://studentday.bemudayana.id/');
-  session_set_cookie_params(['samesite' => 'None', 'secure' => true]);// cokkie same set
-session_start();// cokkie same set
-ob_flush();
-?>
-
 
 <!DOCTYPE html>
   <html>
@@ -27,8 +19,8 @@ ob_flush();
         die();
       } ?>
       <!-- Favicon -->
-      <link rel="shortcut icon" href="{{asset('img/logo/logo-sdu2020-fix-stroke.png')}}" type="image/x-icon" />
-      <link rel="apple-touch-icon" href="{{asset('img/logo/logo-sdu2020-fix-stroke.png')}}">
+      <link rel="shortcut icon" href="{{asset('img/logo/logo nav.png')}}" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="{{asset('img/logo/logo nav.png')}}">
 
       <!-- Mobile Metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
@@ -285,10 +277,10 @@ ob_flush();
       </style>
     </head>  
      
-    <body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay':600}">
+    <body class="loading-overlay-showing" data-loading-overlay data-plugin-options="{'hideDelay':1000}">
       <!--custom loader-->
       <div class="loading-overlay float-left loading">
-        <img class="img-fluid appear-animation animated flipInX appear-animation-visible" src="{{asset('img/logo/new-low.png')}}"
+        <img class="img-fluid appear-animation animated flipInX appear-animation-visible" src="{{asset('img/logo/logo nav.png')}}"
           alt="">
       </div>
       <div class="body">	
@@ -302,7 +294,7 @@ ob_flush();
                   <div class="header-row">
                     <div class="header-logo">
                       <a href="/">
-                        <img alt="Student day"  height="100"  src="{{asset('img/logo/logo-sdu2020-fix-stroke.png')}}">
+                        <img alt="Student day"  height="90"  src="{{asset('img/logo/logo nav.png')}}">
                         <!--width="220"-->
                       </a>
                     </div>
@@ -315,7 +307,7 @@ ob_flush();
                         <nav class="collapse">
                           <ul class="nav nav-pills" id="mainNav">
                             <li class="dropdown">
-                              <a class="dropdown-item {{Request::is('/')?'active':null}}" href="{{('/')}}">
+                              <a class="dropdown-item {{Request::is('/')?'active':null}}" href="/">
                                 Beranda
                               </a>
                             </li>
@@ -347,12 +339,12 @@ ob_flush();
 												</li>
 												<!--</li>-->
                           <li class="dropdown">
-                            <a class="dropdown-item dropdown-toggle {{Request::is('infoUKM')?'active':null}}" href="#">
+                            <a class="dropdown-item dropdown-toggle {{Request::is('infoUkm')?'active':null}}" href="#">
 															UKM
                             </a>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item {{Request::is('infoUKM')?'active':null}}" href="/infoUKM">
+                                <a class="dropdown-item {{Request::is('infoUkm')?'active':null}}" href="infoUkm">
                             Info Ukm
                           </a>
                               </li>
@@ -364,7 +356,7 @@ ob_flush();
                               </ul>
                             </li>
                             <li class="dropdown">
-                              <a class="dropdown-item {{Request::is('infoFakultas')?'active':null}}" href="{{('/infoFakultas')}}">
+                              <a class="dropdown-item {{Request::is('fakultas')?'active':null}}" href="fakultas">
                                 Info Fakultas
                               </a>
                             </li>
@@ -374,7 +366,7 @@ ob_flush();
                               </a>
                             </li>
                             <li class="dropdown">
-                              <a class="dropdown-item {{Request::is('gallery')?'active':null}}" href="{{('/gallery')}}">
+                              <a class="dropdown-item {{Request::is('gallery')?'active':null}}" href="{{('gallery')}}">
                                 Gallery
                               </a>
                             </li>
@@ -404,7 +396,7 @@ ob_flush();
         <div class="container-fluid py-4">
           <div class="row justify-content-md-center py-5 mt-3">
             <div class="col-md-12 col-lg-3  align-items-center  mb-5 mb-lg-0 text-center">
-              <a href="index.html"><img src="img/logo/logo-sdu2020-fix-stroke.png" alt="Logo" class="img-fluid" style="max-width: 270px;text-align: center;"></a>
+              <a href="index.html"><img src="img/logo/logo nav.png" alt="Logo" class="img-fluid" style="max-width: 270px;text-align: center;"></a>
             </div>
             <div class="col-md-12 col-lg-2 text-center text-lg-left mb-5 mb-lg-0">
               <h5 class="text-5 text-transform-none font-weight-semibold text-color-light mb-4">Sekretariat</h5>
@@ -478,7 +470,7 @@ ob_flush();
       <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
       <script src="{{asset('vendor/common/common.min.js')}}"></script>
       <script src="{{asset('vendor/jquery.validation/jquery.validate.min.js')}}"></script>
-      <!--<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>-->
+      <!-- <script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script> -->
       <!--<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>-->
       <script src="{{asset('vendor/jquery.lazyload/jquery.lazyload.min.js')}}"></script>
       <!--<script src="vendor/isotope/jquery.isotope.min.js"></script>-->

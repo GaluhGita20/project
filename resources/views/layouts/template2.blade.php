@@ -276,7 +276,7 @@
   <div class="sidebar">
     <div class="logo_content">
       <div class="logo">
-        <img alt="Student day"  height="70"  src="{{asset('img/logo/logo-sdu2020-fix-stroke.png')}}" href="">
+        <img alt="Student day"  height="70"  src="{{asset('img/logo/logo nav.png')}}" href="">
       </div>
       <a href="#"><i class='bx bx-menu' id="btn"></i></a>
     </div>
@@ -333,7 +333,7 @@
     </div>
   </div>
   <div class="home_content">
-    <div class="text">Home Content</div>
+    <div class="text">Dashboard Admin</div>
   </div>
 
   <script>

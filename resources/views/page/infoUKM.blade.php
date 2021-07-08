@@ -26,4 +26,25 @@ $page="Info UKM"
 			<strong class="font-weight-extra-bold">Info 31 UKM</strong></h2>
 	</div>
 </div>
+
+<div class="ukm mt-lg-5" style="padding-top: 10%">
+	<section class="page-header page-header-background page-header-background-md parallax overlay section-height-4 overlay overlay-show overlay-op-9 border-0 m-0" style="background-image: url(img/SDU/banner.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;" data-plugin-options="{'speed': 8.0}" data-appear-animation="fadeIn">
+		<div class="container">
+			<div class="row">
+        @forelse ($data as $item)
+					<div class=" col-lg-3 col-md-4 ">
+						<div class="<?php if ($item['id']> 4) echo 'mt-4' ?>  feature-transform text-center shadow position-relative d-block overflow-hidden bg-white rounded appear-animation" data-appear-animation="expandIn">
+							<img src="admin/gambar/ukm/{{$item['logo']}}" class="img-fluid m-3 mt-4" alt="" style="max-height: 200px">
+
+							<div class="content py-3">
+								<h5 class="py-lg-0 py-md-1">{{ $item['nama'] }}</h5>
+								<a class="readmore" data-content="Lihat Selengkapnya" href="single-ukm?slug={{$item['slug']}}" class="text-primary">Lihat Selengkapnya <i class="mdi mdi-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+      @endforeach
+			</div>
+		</div>
+	</section>
+</div>
 @endsection
